@@ -27,7 +27,7 @@ const Profile = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/students/profile', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/students/profile`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
