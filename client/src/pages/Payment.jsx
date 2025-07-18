@@ -31,7 +31,7 @@ const Payment = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:5000/api/payments/process', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/payments/process`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
