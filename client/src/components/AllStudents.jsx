@@ -10,7 +10,7 @@ const AllStudents = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/students');
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/students`);
         if (!res.ok) throw new Error('Failed to fetch students');
         const data = await res.json();
         setStudents(data);
